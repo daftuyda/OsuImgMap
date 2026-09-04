@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="background" x1="70" y1="24" x2="1100" y2="610" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#211524" />
+      <stop offset="0.48" stop-color="#100e18" />
+      <stop offset="1" stop-color="#17111e" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#ff91c2" />
+      <stop offset="1" stop-color="#dc3d85" />
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientTransform="translate(988 75) rotate(125) scale(570 520)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ff66aa" stop-opacity="0.22" />
+      <stop offset="1" stop-color="#ff66aa" stop-opacity="0" />
+    </radialGradient>
+    <pattern id="grid" width="42" height="42" patternUnits="userSpaceOnUse">
+      <path d="M42 0H0V42" fill="none" stroke="#ffffff" stroke-opacity="0.035" />
+    </pattern>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%">
+      <feDropShadow dx="0" dy="20" stdDeviation="25" flood-color="#000000" flood-opacity="0.42" />
+    </filter>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#background)" />
+  <rect width="1200" height="630" fill="url(#glow)" />
+  <rect width="1200" height="630" fill="url(#grid)" />
+  <circle cx="1095" cy="-14" r="186" fill="none" stroke="#ff91c2" stroke-opacity="0.09" stroke-width="42" />
+  <circle cx="112" cy="668" r="190" fill="none" stroke="#8bdcff" stroke-opacity="0.06" stroke-width="46" />
+
+  <g transform="translate(64 55)">
+    <rect width="52" height="52" rx="15" fill="url(#accent)" />
+    <g transform="translate(7 8)" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
+      <rect x="1" y="2" width="23" height="17" rx="4" />
+      <rect x="15" y="19" width="23" height="17" rx="4" />
+      <path d="m20 17 5 5" />
+    </g>
+    <text x="69" y="23" fill="#ffffff" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="750">imagemap</text>
+    <text x="69" y="45" fill="#a79cae" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="600">builder for osu!</text>
+  </g>
+
+  <g transform="translate(66 175)">
+    <rect width="204" height="34" rx="17" fill="#ff66aa" fill-opacity="0.12" stroke="#ff91c2" stroke-opacity="0.32" />
+    <circle cx="19" cy="17" r="4" fill="#ff91c2" />
+    <text x="34" y="22" fill="#ffb0d4" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="750" letter-spacing="1.4">FREE BBCode TOOL</text>
+    <text x="0" y="113" fill="#ffffff" font-family="Segoe UI, Arial, sans-serif" font-size="68" font-weight="800" letter-spacing="-2.4">Make an</text>
+    <text x="0" y="184" fill="#ff84bb" font-family="Segoe UI, Arial, sans-serif" font-size="68" font-weight="800" letter-spacing="-2.4">image map</text>
+    <text x="2" y="234" fill="#b9afc0" font-family="Segoe UI, Arial, sans-serif" font-size="23" font-weight="500">Visual osu! imagemap BBCode builder</text>
+  </g>
+
+  <g transform="translate(690 112)" filter="url(#shadow)">
+    <rect width="440" height="356" rx="27" fill="#211d29" stroke="#ffffff" stroke-opacity="0.13" stroke-width="2" />
+    <rect x="22" y="22" width="396" height="40" rx="11" fill="#17131e" stroke="#ffffff" stroke-opacity="0.08" />
+    <circle cx="45" cy="42" r="5" fill="#ff7180" />
+    <circle cx="63" cy="42" r="5" fill="#e8bd69" />
+    <circle cx="81" cy="42" r="5" fill="#62e6ae" />
+    <text x="104" y="47" fill="#837989" font-family="Consolas, monospace" font-size="13">visual-editor</text>
+
+    <rect x="22" y="80" width="396" height="222" rx="13" fill="#0f1824" />
+    <path d="M22 249 123 151l66 56 68-70 161 129v36H22Z" fill="#24364a" />
+    <circle cx="326" cy="129" r="29" fill="#ffc46b" fill-opacity="0.76" />
+
+    <g fill="#ff66aa" fill-opacity="0.2" stroke="#ffffff" stroke-width="3">
+      <rect x="55" y="110" width="139" height="72" rx="2" />
+      <rect x="219" y="194" width="161" height="76" rx="2" />
+    </g>
+    <g fill="#211621" stroke="#ff91c2" stroke-width="2">
+      <rect x="44" y="99" width="25" height="25" rx="7" />
+      <rect x="208" y="183" width="25" height="25" rx="7" />
+    </g>
+    <g fill="#ffffff" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="800" text-anchor="middle">
+      <text x="56.5" y="117">1</text>
+      <text x="220.5" y="201">2</text>
+    </g>
+    <path d="M194 80V302M22 194H418" stroke="#a8e2ff" stroke-opacity="0.72" stroke-dasharray="5 6" />
+
+    <rect x="22" y="319" width="115" height="18" rx="9" fill="#ff66aa" fill-opacity="0.16" />
+    <rect x="148" y="319" width="96" height="18" rx="9" fill="#ffffff" fill-opacity="0.07" />
+    <rect x="255" y="319" width="163" height="18" rx="9" fill="#62e6ae" fill-opacity="0.12" />
+  </g>
+
+  <g transform="translate(66 535)" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">
+    <g>
+      <rect width="138" height="40" rx="20" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.1" />
+      <text x="69" y="25" fill="#d8d0dc" text-anchor="middle">Drag &amp; resize</text>
+    </g>
+    <g transform="translate(151)">
+      <rect width="132" height="40" rx="20" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.1" />
+      <text x="66" y="25" fill="#d8d0dc" text-anchor="middle">No overlaps</text>
+    </g>
+    <g transform="translate(296)">
+      <rect width="137" height="40" rx="20" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.1" />
+      <text x="68.5" y="25" fill="#d8d0dc" text-anchor="middle">Copy BBCode</text>
+    </g>
+  </g>
+
+  <text x="1132" y="568" fill="#8f8495" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="600" text-anchor="end">Unofficial community tool</text>
+</svg>

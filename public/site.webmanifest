@@ -1,0 +1,19 @@
+{
+  "name": "osu! Imagemap Builder",
+  "short_name": "Imagemap",
+  "description": "Create osu! imagemap BBCode visually with a free browser-based editor.",
+  "id": "./",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#100e18",
+  "theme_color": "#100e18",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

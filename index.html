@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Create osu! imagemap BBCode visually with this free browser tool. Load an image, draw clickable areas, then copy code for profiles, forums, and beatmaps."
+    />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+    <meta name="application-name" content="osu! Imagemap Builder" />
+    <meta name="theme-color" content="#100e18" />
+    <meta name="color-scheme" content="dark" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="osu! Imagemap Builder" />
+    <meta property="og:title" content="osu! Imagemap Builder – Free BBCode Generator" />
+    <meta
+      property="og:description"
+      content="Create osu! imagemap BBCode visually with this free browser tool. Load an image, draw clickable areas, then copy code for profiles, forums, and beatmaps."
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="osu! Imagemap Builder – Free BBCode Generator" />
+    <meta
+      name="twitter:description"
+      content="Create osu! imagemap BBCode visually with this free browser tool. Load an image, draw clickable areas, then copy code for profiles, forums, and beatmaps."
+    />
+    <meta
+      name="google-site-verification"
+      content="mweu1U9ADfUJvUHxr27nSOIMqdR97aMBL59t7E_zrYI"
+    />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="manifest" href="./site.webmanifest" />
+    <link rel="stylesheet" href="./src/styles.css" />
+    <title>osu! Imagemap Builder – Free BBCode Generator</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to editor</a>
+
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="#main-content" aria-label="osu! imagemap builder home">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 40 40" focusable="false">
+              <rect x="5" y="7" width="16" height="12" rx="3"></rect>
+              <rect x="19" y="21" width="16" height="12" rx="3"></rect>
+              <path d="m17 18 6 5"></path>
+              <circle cx="12" cy="13" r="1.5"></circle>
+              <circle cx="28" cy="27" r="1.5"></circle>
+            </svg>
+          </span>
+          <span>
+            <strong>imagemap</strong>
+            <small>builder for osu!</small>
+          </span>
+        </a>
+
+        <div class="header-actions">
+          <a
+            class="button button-quiet"
+            href="https://osu.ppy.sh/wiki/en/BBCode#imagemap"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            BBCode guide
+            <svg class="button-icon" viewBox="0 0 20 20" aria-hidden="true">
+              <path d="M7 5h8v8M15 5l-9 9"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content" class="app-shell">
+      <section class="hero" aria-labelledby="page-title">
+        <div>
+          <p class="eyebrow"><span aria-hidden="true"></span> Free osu! BBCode tool</p>
+          <h1 id="page-title">Make an <span>image map</span></h1>
+          <p class="hero-copy">
+            Create responsive osu! imagemap BBCode visually. Draw clickable areas, then paste
+            the generated code into your profile, forum post, or beatmap description.
+          </p>
+        </div>
+        <ol class="workflow" aria-label="Three-step workflow">
+          <li class="workflow-step is-active">
+            <span>1</span>
+            <div><strong>Add image</strong><small>Paste a direct URL</small></div>
+          </li>
+          <li class="workflow-step">
+            <span>2</span>
+            <div><strong>Place areas</strong><small>Drag and resize</small></div>
+          </li>
+          <li class="workflow-step">
+            <span>3</span>
+            <div><strong>Copy code</strong><small>Ready for osu!</small></div>
+          </li>
+        </ol>
+      </section>
+
+      <section class="panel source-panel" aria-labelledby="image-source-title">
+        <div class="section-heading compact-heading">
+          <span class="step-number" aria-hidden="true">01</span>
+          <div>
+            <h2 id="image-source-title">Choose your image</h2>
+            <p>Use a direct, publicly accessible image URL.</p>
+          </div>
+        </div>
+
+        <form id="image-form" class="source-form" novalidate>
+          <div class="field source-field">
+            <label for="image-url">Image URL</label>
+            <div class="input-shell">
+              <svg viewBox="0 0 20 20" aria-hidden="true">
+                <path d="M3.5 5.5A2.5 2.5 0 0 1 6 3h8a2.5 2.5 0 0 1 2.5 2.5v9A2.5 2.5 0 0 1 14 17H6a2.5 2.5 0 0 1-2.5-2.5v-9Z"></path>
+                <circle cx="7" cy="7" r="1.25"></circle>
+                <path d="m4 14 3.5-3.5 2.5 2 2-2 4 4"></path>
+              </svg>
+              <input
+                id="image-url"
+                name="image-url"
+                type="url"
+                inputmode="url"
+                autocomplete="url"
+                spellcheck="false"
+                aria-describedby="image-status"
+                placeholder="https://example.com/banner.png"
+                required
+              />
+            </div>
+            <p id="image-status" class="field-message" aria-live="polite">
+              Paste a link ending in an image file such as .png, .jpg, .webp, or .gif.
+            </p>
+          </div>
+          <div class="source-actions">
+            <button id="load-image" class="button button-primary" type="submit">
+              <span class="button-label">Load image</span>
+              <svg class="button-icon" viewBox="0 0 20 20" aria-hidden="true">
+                <path d="m7 4 6 6-6 6"></path>
+              </svg>
+            </button>
+            <button id="use-sample" class="button button-secondary" type="button">
+              Use sample
+            </button>
+            <button
+              id="clear-all"
+              class="button button-danger"
+              type="button"
+              aria-label="Clear image, link areas, and saved project"
+              disabled
+            >
+              <svg class="button-icon" viewBox="0 0 20 20" aria-hidden="true">
+                <path d="M4 6h12M8 3h4l1 3H7l1-3ZM6 6l.6 10h6.8L14 6M8.5 9v4M11.5 9v4"></path>
+              </svg>
+              Clear all
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <div class="editor-grid">
+        <section class="panel canvas-panel" aria-labelledby="canvas-title">
+          <div class="panel-toolbar">
+            <div class="section-heading">
+              <span class="step-number" aria-hidden="true">02</span>
+              <div>
+                <div class="title-row">
+                  <h2 id="canvas-title">Place link areas</h2>
+                  <span id="canvas-count" class="count-badge">0 areas</span>
+                  <span class="snap-badge" title="Areas snap to image and neighboring edges">
+                    <svg viewBox="0 0 20 20" aria-hidden="true">
+                      <path d="M5 3v8a5 5 0 0 0 10 0V3M5 7h4M11 7h4"></path>
+                    </svg>
+                    Edge snapping
+                  </span>
+                </div>
+                <p>Position a rectangle over every part you want people to click.</p>
+              </div>
+            </div>
+            <button id="add-region" class="button button-primary" type="button" disabled>
+              <svg class="button-icon" viewBox="0 0 20 20" aria-hidden="true">
+                <path d="M10 4v12M4 10h12"></path>
+              </svg>
+              Add link area
+            </button>
+          </div>
+
+          <div id="canvas-surface" class="canvas-surface">
+            <div id="canvas-empty" class="canvas-empty">
+              <span class="empty-illustration" aria-hidden="true">
+                <svg viewBox="0 0 72 72">
+                  <rect x="8" y="12" width="56" height="45" rx="7"></rect>
+                  <circle cx="25" cy="28" r="5"></circle>
+                  <path d="m12 51 15-15 10 9 8-7 15 13"></path>
+                  <path d="M50 6v13M43.5 12.5h13"></path>
+                </svg>
+              </span>
+              <strong>Add an image to begin</strong>
+              <p>Your image and clickable areas will appear here.</p>
+            </div>
+
+              <div id="image-stage" class="image-stage" hidden>
+              <img
+                id="source-image"
+                class="source-image"
+                alt="Imagemap source preview"
+                draggable="false"
+                referrerpolicy="no-referrer"
+              />
+              <div id="regions-layer" class="regions-layer" aria-label="Clickable areas"></div>
+              <div id="snap-guide-x" class="snap-guide snap-guide-x" hidden></div>
+                <div id="snap-guide-y" class="snap-guide snap-guide-y" hidden></div>
+              </div>
+              <p id="canvas-keyboard-help" class="visually-hidden">
+                Arrow keys move the focused area by 0.5 percent. Hold Shift for 2 percent or Alt
+                for 0.1 percent. Delete or Backspace removes it.
+              </p>
+
+            <div id="image-loader" class="image-loader" hidden role="status">
+              <span class="spinner" aria-hidden="true"></span>
+              Loading image…
+            </div>
+          </div>
+
+          <div class="canvas-footer">
+            <div class="interaction-hints" aria-label="Editor controls">
+              <span>
+                <svg viewBox="0 0 20 20" aria-hidden="true">
+                  <path d="M10 2v16M2 10h16M7 5l3-3 3 3M7 15l3 3 3-3M5 7l-3 3 3 3M15 7l3 3-3 3"></path>
+                </svg>
+                Drag to move
+              </span>
+              <span>
+                <svg viewBox="0 0 20 20" aria-hidden="true">
+                  <path d="M4 8V4h4M12 4h4v4M16 12v4h-4M8 16H4v-4"></path>
+                </svg>
+                Pull handles to resize
+              </span>
+              <span>
+                <svg viewBox="0 0 20 20" aria-hidden="true">
+                  <rect x="2.5" y="5" width="15" height="10" rx="2"></rect>
+                  <path d="M6 9h.01M9 9h.01M12 9h.01M6 12h8"></path>
+                </svg>
+                Arrow keys nudge the focused area
+              </span>
+            </div>
+            <span id="image-meta" class="image-meta">No image loaded</span>
+          </div>
+        </section>
+
+        <aside class="panel inspector-panel" aria-labelledby="regions-title">
+          <div class="inspector-header">
+            <div>
+              <p class="panel-kicker">Link areas</p>
+              <h2 id="regions-title">Your hotspots</h2>
+            </div>
+            <span id="region-count" class="count-badge">0</span>
+          </div>
+
+          <div id="region-list" class="region-list" aria-label="Link area list"></div>
+
+          <div class="inspector-divider"></div>
+
+          <div id="inspector-empty" class="inspector-empty">
+            <span aria-hidden="true">
+              <svg viewBox="0 0 32 32">
+                <path d="m8 5 17 11-8 2-4 8L8 5Z"></path>
+              </svg>
+            </span>
+            <strong>No area selected</strong>
+            <p>Add or select an area on the image to edit its link and exact position.</p>
+          </div>
+
+          <div id="region-inspector" class="region-inspector" hidden>
+            <div class="selected-heading">
+              <div>
+                <p class="panel-kicker">Now editing</p>
+                <h3 id="selected-region-name">Area 1</h3>
+              </div>
+              <span class="selected-chip"><span aria-hidden="true"></span> Selected</span>
+            </div>
+
+            <div class="field">
+              <label for="destination-url">Destination URL</label>
+              <input
+                id="destination-url"
+                type="text"
+                inputmode="url"
+                autocomplete="url"
+                spellcheck="false"
+                aria-describedby="destination-message"
+                aria-errormessage="destination-message"
+                placeholder="https://osu.ppy.sh/users/..."
+              />
+              <p id="destination-message" class="field-message">Use a complete web URL, or # for no link.</p>
+            </div>
+
+            <div class="field">
+              <label for="hover-title">
+                Hover text <span class="optional-label">Optional</span>
+              </label>
+              <input
+                id="hover-title"
+                type="text"
+                maxlength="160"
+                placeholder="e.g. View my profile"
+              />
+            </div>
+
+            <fieldset class="geometry-fieldset">
+              <legend>Position &amp; size <span>percent</span></legend>
+              <div class="geometry-grid">
+                <label for="geometry-x">X<input id="geometry-x" type="number" inputmode="decimal" min="0" max="100" step="0.01" aria-describedby="geometry-message" /></label>
+                <label for="geometry-y">Y<input id="geometry-y" type="number" inputmode="decimal" min="0" max="100" step="0.01" aria-describedby="geometry-message" /></label>
+                <label for="geometry-width">Width<input id="geometry-width" type="number" inputmode="decimal" min="2" max="100" step="0.01" aria-describedby="geometry-message" /></label>
+                <label for="geometry-height">Height<input id="geometry-height" type="number" inputmode="decimal" min="2" max="100" step="0.01" aria-describedby="geometry-message" /></label>
+              </div>
+              <p id="geometry-message" class="geometry-note" role="status">
+                Dragging and resizing snap to nearby edges. All controls prevent overlap.
+              </p>
+            </fieldset>
+
+            <div class="inspector-actions">
+              <button id="duplicate-region" class="button button-secondary" type="button">
+                <svg class="button-icon" viewBox="0 0 20 20" aria-hidden="true">
+                  <rect x="7" y="7" width="9" height="9" rx="2"></rect>
+                  <path d="M13 7V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h1"></path>
+                </svg>
+                Duplicate
+              </button>
+              <button id="delete-region" class="button button-danger" type="button">
+                <svg class="button-icon" viewBox="0 0 20 20" aria-hidden="true">
+                  <path d="M4 6h12M8 3h4l1 3H7l1-3ZM6 6l.6 10h6.8L14 6M8.5 9v4M11.5 9v4"></path>
+                </svg>
+                Delete
+              </button>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <section class="panel output-panel" aria-labelledby="output-title">
+        <div class="output-heading">
+          <div class="section-heading">
+            <span class="step-number" aria-hidden="true">03</span>
+            <div>
+              <div class="title-row">
+                <h2 id="output-title">Copy your BBCode</h2>
+                <span id="output-ready-badge" class="ready-badge">Needs an area</span>
+              </div>
+              <p>The output updates automatically as you make changes.</p>
+            </div>
+          </div>
+          <button id="copy-code" class="button button-primary copy-button" type="button" disabled>
+            <svg class="button-icon copy-icon" viewBox="0 0 20 20" aria-hidden="true">
+              <rect x="7" y="7" width="9" height="9" rx="2"></rect>
+              <path d="M13 7V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h1"></path>
+            </svg>
+            <svg class="button-icon check-icon" viewBox="0 0 20 20" aria-hidden="true">
+              <path d="m4 10 4 4 8-9"></path>
+            </svg>
+            <span class="copy-label">Copy BBCode</span>
+          </button>
+        </div>
+
+        <div class="code-shell">
+          <div class="code-toolbar" aria-hidden="true">
+            <span></span><span></span><span></span>
+            <strong>imagemap.bbcode</strong>
+          </div>
+          <textarea
+            id="bbcode-output"
+            readonly
+            spellcheck="false"
+            aria-label="Generated imagemap BBCode"
+            aria-describedby="output-status"
+          ></textarea>
+        </div>
+        <div class="output-footer">
+          <p id="output-status">Add at least one link area to finish your imagemap.</p>
+          <a
+            href="https://osu.ppy.sh/wiki/en/BBCode#imagemap"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            How imagemap BBCode works
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M7 5h8v8M15 5l-9 9"></path></svg>
+          </a>
+        </div>
+      </section>
+
+      <section class="panel seo-panel" aria-labelledby="about-title">
+        <div class="seo-intro">
+          <div>
+            <p class="panel-kicker">About the tool</p>
+            <h2 id="about-title">An easier osu! image map generator</h2>
+          </div>
+          <p>
+            This free imagemap builder turns a visual layout into the percentage-based
+            <code>[imagemap]</code> syntax osu! expects—without measuring pixels or writing each
+            coordinate by hand.
+          </p>
+        </div>
+
+        <div class="seo-grid">
+          <article class="seo-card">
+            <h3>What is imagemap BBCode?</h3>
+            <p>
+              It adds one or more rectangular links to a hosted image. osu! supports the format
+              in places such as profiles, forum posts, signatures, and beatmap descriptions.
+            </p>
+            <a href="https://osu.ppy.sh/wiki/en/BBCode#imagemap" target="_blank" rel="noopener noreferrer">
+              Read the official syntax
+              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M7 5h8v8M15 5l-9 9"></path></svg>
+            </a>
+          </article>
+          <article class="seo-card">
+            <h3>How do coordinates work?</h3>
+            <p>
+              Each area uses X, Y, width, and height values from 0 to 100. The editor calculates
+              those percentages while you drag, resize, or use the precise number fields.
+            </p>
+          </article>
+          <article class="seo-card">
+            <h3>Is anything uploaded?</h3>
+            <p>
+              No project data is sent to an application server. Your layout stays in browser
+              storage, while the preview loads your public image directly from its host.
+            </p>
+          </article>
+          <article class="seo-card">
+            <h3>Can link areas overlap?</h3>
+            <p>
+              Areas may touch but cannot overlap. Light edge snapping helps line them up, and
+              every drag, resize, keyboard nudge, and number edit keeps the layout valid.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <noscript>
+        <p class="noscript-note">
+          JavaScript is required to use the visual editor and generate imagemap BBCode.
+        </p>
+      </noscript>
+    </main>
+
+    <footer class="site-footer">
+      <p>Built for the osu! community. This unofficial tool is not affiliated with osu! or ppy Pty Ltd.</p>
+      <p>Your image and links stay in your browser.</p>
+    </footer>
+
+    <dialog
+      id="clear-dialog"
+      class="confirm-dialog"
+      aria-labelledby="clear-dialog-title"
+      aria-describedby="clear-dialog-description"
+    >
+      <form method="dialog">
+        <span class="confirm-dialog-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M5 7h14M9 3h6l1 4H8l1-4Zm-1 4 .8 13h6.4L16 7M10 11v5M14 11v5"></path>
+          </svg>
+        </span>
+        <h2 id="clear-dialog-title">Clear this project?</h2>
+        <p id="clear-dialog-description">
+          This removes the current image, every link area, and the saved project from this
+          browser. This cannot be undone.
+        </p>
+        <div class="confirm-dialog-actions">
+          <button class="button button-secondary" type="submit" value="cancel" autofocus>
+            Keep editing
+          </button>
+          <button class="button button-danger" type="submit" value="clear">
+            Clear everything
+          </button>
+        </div>
+      </form>
+    </dialog>
+
+    <div id="toast" class="toast" role="region" aria-label="Notification" hidden>
+      <span id="toast-message"></span>
+      <div class="toast-actions">
+        <button id="toast-action" type="button" hidden>Undo</button>
+        <button id="toast-dismiss" class="toast-dismiss" type="button" aria-label="Dismiss notification">×</button>
+      </div>
+    </div>
+    <div id="live-region" class="visually-hidden" aria-live="polite"></div>
+
+    <script type="module" src="./src/app.js"></script>
+  </body>
+</html>
